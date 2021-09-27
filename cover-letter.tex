@@ -1,0 +1,133 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[
+  12pt,
+  letterpaper,
+  draft,
+]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-darknight}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+  %-------------------------------------------------------------------------------
+  %	PERSONAL INFORMATION
+  %	Comment any of the lines below if they are not required
+  %-------------------------------------------------------------------------------
+  % Available options: circle|rectangle,edge/noedge,left/right
+  % \photo[circle,noedge,left]{./profile}
+  \name{Bryan}{Hoang}
+  \position{Teaching Assistant{\enskip\cdotp\enskip}Mentor}
+  \address{Kingston, ON, K7K \censor{4M4}}
+
+  \mobile{+1-613-\censor{583-3497}}
+  \email{bryan@bryanhoang.dev}
+  \homepage{bryanhoang.dev}
+  % \github{bryan-hoang}
+  % \linkedin{bryan-c-hoang}
+  % \gitlab{gitlab-id}
+  % \stackoverflow{SO-id}{SO-name}
+  % \twitter{@twit}
+  % \skype{skype-id}
+  % \reddit{reddit-id}
+  % \medium{madium-id}
+  % \googlescholar{googlescholar-id}{name-to-display}
+  %% \firstname and \lastname will be used
+  % \googlescholar{googlescholar-id}{}
+  % \extrainfo{extra informations}
+
+  % \quote{"Be the change that you want to see in the world."}
+
+  %-------------------------------------------------------------------------------
+  %	LETTER INFORMATION
+  %	All of the below lines must be filled out
+  %-------------------------------------------------------------------------------
+  % The company being applied to
+  \recipient{Department of Mathematics and Statistics}
+  {Queen's University \\48 University Avenue\\Kingston, ON, K7L 3N6}
+  % The date on the letter, default is the date of compilation
+  \letterdate{\today}
+  % The title of the letter
+  \lettertitle{Job Application for Teaching Assistant}
+  % How the letter is opened
+  \letteropening{To Whom It May Concern,}
+  % How the letter is closed
+  \letterclosing{Sincerely,}
+  % Any enclosures with the letter
+  \letterenclosure[Attached]{Résumé}
+
+  % Print the header with above personal informations
+  % Give optional argument to change alignment(C: center, L: left, R: right)
+  \makecvheader[R]
+
+  % Print the footer with 3 arguments(<left>, <center>, <right>)
+  % Leave any of these blank if they are not needed
+  \makecvfooter{\today}
+  {Bryan Hoang~·~Cover Letter}
+  {}
+
+  % Print the title with above letter informations
+  \makelettertitle{}
+
+  %-------------------------------------------------------------------------------
+  %	LETTER CONTENT
+  %-------------------------------------------------------------------------------
+  \begin{cvletter}
+    I was previously an APSC 171 and APSC 174 teaching assistant (TA) and thoroughly enjoyed my time learning to teach students in a more formal environment with direction from the lead professor during weekly meetings. I looked forward to seeing my section of students and received some very amusing TA evaluations that I still have put on my wall to this day. Still, I remember the critique from most of those evaluations and made sure to address them in future sessions after discussing the feedback with the students.
+
+    In my first year, my APSC 174 teaching assistant (TA) was an energetic 4th year Applied Mathematics (Apple Math) and Engineering Student and was one of the few TAs who engaged me during tutorials. His passion, my experience as an EngLinks tutor, and my enjoyment of the program thus far are why I am interested in contributing to the success of education in mathematics at Queen's University as a 171 and 174 TA.
+
+    As an EngLinks tutor, I have had the opportunity to tutor groups of students through one-on-one/group tutoring sessions, Douglas Help Desks, and a Final Exam Review Workshop. Through those group sessions, I have become proficient at communicating the core concepts in 171 and 174 while presenting to a group of students.
+
+    If possible, I would love to be a TA again in my final year of the Applied Mathematics program here at Queen's to meet more enthusiastic students!
+
+    Thank you for your consideration.
+  \end{cvletter}
+
+  %-------------------------------------------------------------------------------
+  % Print the signature and enclosures with above letter informations
+  \makeletterclosing{}
+
+\end{document}

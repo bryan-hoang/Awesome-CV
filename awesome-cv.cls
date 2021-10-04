@@ -38,11 +38,15 @@
   \PassOptionsToClass{\CurrentOption}{article}
 }
 \ProcessOptions\relax
-\LoadClass{article}
+\LoadClass[
+  12pt,
+  letterpaper,
+]{article}
 
 %-------------------------------------------------------------------------------
 %                3rd party packages
 %-------------------------------------------------------------------------------
+\RequirePackage[utf8]{inputenc}
 % Needed to make fixed length table
 \RequirePackage{array}
 % Needed to handle list environment
@@ -77,20 +81,18 @@
 \RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
+% Typeset telephone numbers according to different national conventions and to
+% link them when required.
+\RequirePackage[
+  foreign,
+]{phonenumbers}
 % Tools for Producing Redacted Documents.
 \RequirePackage{censor}
 % Provides an interface for selecting code depending on the options draft and
 % final.
 \RequirePackage{ifdraft}
 % Needed to deal hyperlink
-\RequirePackage[hidelinks,unicode]{hyperref}
-
-\hypersetup{%
-  pdftitle={},
-  pdfauthor={},
-  pdfsubject={},
-  pdfkeywords={}
-}
+\RequirePackage[hidelinks]{hyperref}
 
 \ifoptiondraft{}{\StopCensoring}
 
@@ -455,20 +457,20 @@
       \ifthenelse{\isundefined{\@mobile}}%
       {}%
       {%
-        \faMobile\acvHeaderIconSep\@mobile%
+        \faMobile\acvHeaderIconSep\censor{\phonenumber{\@mobile}}%
         \setbool{isstart}{false}%
       }%
       \ifthenelse{\isundefined{\@email}}%
       {}%
       {%
         \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-        \href{mailto:\@email}{\faEnvelope\acvHeaderIconSep\@email}%
+        \faEnvelope\acvHeaderIconSep\censor{\href{mailto:\@email}{\@email}}%
       }%
       \ifthenelse{\isundefined{\@homepage}}%
       {}%
       {%
         \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-        \href{https://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
+        \faHome\acvHeaderIconSep\censor{\href{https://\@homepage}{\@homepage}}%
       }%
       \ifthenelse{\isundefined{\@github}}%
       {}%
@@ -728,3 +730,8 @@
     \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
   }
 }
+
+% Allows authors to split a document into one main file and several subsidiary
+% files (subfiles) akin to the \input command, with the added benfit of making
+% the subfies compilable on their own.
+\RequirePackage{subfiles}

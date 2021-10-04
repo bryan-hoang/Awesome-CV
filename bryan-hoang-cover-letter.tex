@@ -18,8 +18,6 @@
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[
-  12pt,
-  letterpaper,
   draft,
 ]{awesome-cv}
 
@@ -59,10 +57,14 @@
   % Available options: circle|rectangle,edge/noedge,left/right
   % \photo[circle,noedge,left]{./profile}
   \name{Bryan}{Hoang}
-  \position{Teaching Assistant{\enskip\cdotp\enskip}Mentor}
+  \position{%
+    Software Developer%
+    % \enskip\cdotp\enskip%
+    % Web Developer%
+  }
   \address{Kingston, ON, K7K \censor{4M4}}
 
-  \mobile{+1-613-\censor{583-3497}}
+  \mobile{+1 613 583 3497}
   \email{bryan@bryanhoang.dev}
   \homepage{bryanhoang.dev}
   % \github{bryan-hoang}
@@ -84,15 +86,8 @@
   %	LETTER INFORMATION
   %	All of the below lines must be filled out
   %-------------------------------------------------------------------------------
-  % The company being applied to
-  \recipient{Department of Mathematics and Statistics}
-  {Queen's University \\48 University Avenue\\Kingston, ON, K7L 3N6}
   % The date on the letter, default is the date of compilation
   \letterdate{\today}
-  % The title of the letter
-  \lettertitle{Job Application for Teaching Assistant}
-  % How the letter is opened
-  \letteropening{To Whom It May Concern,}
   % How the letter is closed
   \letterclosing{Sincerely,}
   % Any enclosures with the letter
@@ -108,23 +103,7 @@
   {Bryan Hoang~·~Cover Letter}
   {}
 
-  % Print the title with above letter informations
-  \makelettertitle{}
-
-  %-------------------------------------------------------------------------------
-  %	LETTER CONTENT
-  %-------------------------------------------------------------------------------
-  \begin{cvletter}
-    I was previously an APSC 171 and APSC 174 teaching assistant (TA) and thoroughly enjoyed my time learning to teach students in a more formal environment with direction from the lead professor during weekly meetings. I looked forward to seeing my section of students and received some very amusing TA evaluations that I still have put on my wall to this day. Still, I remember the critique from most of those evaluations and made sure to address them in future sessions after discussing the feedback with the students.
-
-    In my first year, my APSC 174 teaching assistant (TA) was an energetic 4th year Applied Mathematics (Apple Math) and Engineering Student and was one of the few TAs who engaged me during tutorials. His passion, my experience as an EngLinks tutor, and my enjoyment of the program thus far are why I am interested in contributing to the success of education in mathematics at Queen's University as a 171 and 174 TA.
-
-    As an EngLinks tutor, I have had the opportunity to tutor groups of students through one-on-one/group tutoring sessions, Douglas Help Desks, and a Final Exam Review Workshop. Through those group sessions, I have become proficient at communicating the core concepts in 171 and 174 while presenting to a group of students.
-
-    If possible, I would love to be a TA again in my final year of the Applied Mathematics program here at Queen's to meet more enthusiastic students!
-
-    Thank you for your consideration.
-  \end{cvletter}
+  \subfile{jobs/kds-software-developer}
 
   %-------------------------------------------------------------------------------
   % Print the signature and enclosures with above letter informations
